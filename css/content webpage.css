@@ -1,0 +1,216 @@
+body {
+    background-color: #800000;
+    color: #FEF9EF;
+    font-family: 'Montserrat:ital,wght@1,500', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 120%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: scroll;
+    background-blend-mode: overlay;
+    padding-left: 70px;
+    padding-right: 10px;
+    text-align: justify;
+    box-sizing: border-box;
+    overflow: auto;
+}
+a {
+    color: #FEF9EF;
+    text-decoration: none;
+}
+a:hover {
+    opacity: 0.5;
+}
+h1, h2 {
+    text-align: left;
+}
+h1:hover, h2:hover {
+    color: #ff982a;
+    font-weight: 1200;
+}
+p {
+    text-indent: 50px;
+}
+.italic {
+    font-style: italic;
+}
+
+
+
+/*HEADER*/
+header {
+    color: #FEF9EF;
+    font-size: 120%;
+    margin: 5px;
+    margin-top: 325px;
+}
+header h2 {
+    margin-top: -25px;
+}
+header img {
+    float: left;
+    margin: 5px;
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 5px;
+}
+
+
+
+/*CONTENT*/
+article > .noPic, article > section.leftPic, article > section.rightPic {
+    position: relative;
+    height: max-content;
+    margin: 5px;
+}
+
+
+
+/*FOR WHEN THERE IS NO PICTURE*/
+.noPic {
+    margin: 5px 15px 5px 10px;
+    clear: both;
+    padding: 0 10px;
+}
+
+
+
+/*FOR WHEN THE PICTURE IS ON THE LEFT*/
+section.leftPic {
+    margin: 5px;
+    position: relative;
+}
+section.leftPic > img {
+    margin: 5px;
+    width: 30%;
+    height: auto;
+    float: left;
+    padding: 5px;
+}
+section.leftPic > h2, section.leftPic > p, section.leftPic > ul > li {
+    margin: 5px;  
+    padding: 5px;
+}
+
+
+
+/*FOR WHEN THE PICTURE IS ON THE RIGHT*/
+section.rightPic {
+    margin: 5px;
+    position: relative;
+}
+section.rightPic > img {
+    margin: 5px;
+    width: 30%;
+    height: auto;
+    float: right;
+    padding: 5px;
+}
+section.rightPic > h2, section.rightPic > p, section.rightPic > ul > li {
+    margin: 5px; 
+    padding: 5px; 
+}
+
+
+
+/*REFERENCES*/
+details.references {
+    margin: 0px 50px;
+    padding: 2px 10px;
+    background-color: #ff982a;
+}
+details.references > ul > li {
+    list-style-type: none;
+    text-align: left;
+    padding-left: 50px;
+    text-indent: -50px;
+}
+details.references > summary {
+    font-size: 120%;
+}
+
+
+
+/*RESPONSIVITY*/
+@media only screen and (max-width: 660px) {
+    section.rightPic > img, section.leftPic > img {
+        clear: both;
+        margin: 5px;
+        width: 95%;
+    }
+    details.references {
+        margin: 0px 20px;
+    }
+}
+@media only screen and (max-width: 950px) {
+    body {
+        font-size: 100%;
+        margin-right: 0px;
+        padding-right: 5px;
+    }
+}
+
+
+
+/*COPYRIGHT*/
+footer {
+    font-size: 100%; 
+    text-align: right;
+    padding: 15px;
+}
+
+
+
+/*AUDIO*/
+section.audio {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    margin: 10px;
+    background-color: #ff982a;
+    color: #FEF9EF;
+    width: 400px;
+}
+section.audio > audio {
+    position: relative;
+    left: 50px;
+}
+section.audio > details {
+    margin-top: 10px;
+}
+section.audio > details > ul {
+    background-color: #800000;
+    margin-bottom: -10px;
+    padding-bottom: 30px;
+}
+section.audio > details > ul > li, section.audio > details > summary {
+    font-size: 80%;
+}
+section.audio > details > ul > li, section.audio > details > ul > li > a {
+    padding: 5px;
+}
+
+
+
+/*MENUBAR*/
+nav > ul > li {
+    list-style-type: none;
+}
+nav > ul > li > a > img {
+    width: 75px;
+    margin-top: -5px;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    z-index: 5;
+}
+nav > ul > li > img {
+    width: 75px;
+    left: 0px;
+    position: fixed;
+    top: 420px;
+    height: 100%;
+    z-index: 1;
+}
+/* For the menubar, I want to add words that come out of the icon like the one in the Khub menubar.*/

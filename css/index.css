@@ -1,0 +1,225 @@
+body {
+    background-color: #800000;
+    color: #FEF9EF;
+    font-family: 'Montserrat:ital,wght@1,500', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: scroll;
+    background-blend-mode: overlay;
+    padding-left: 80px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+a {
+    color: #FEF9EF;
+    text-decoration: none;
+}
+a:hover {
+    opacity: 0.5;
+}
+h1:hover, h2:hover {
+    color: #ff982a;
+    font-weight: 1200;
+}
+
+
+
+/*HEADER*/
+header {
+    color: #FEF9EF;
+    font-size: 150%;
+    margin: 5px;
+    margin-top: 325px;
+}
+header h2 {
+    margin-top: -25px;
+}
+header img {
+    float: left;
+    margin: 5px;
+}
+
+
+
+/*TRIANGULAR NAVIGATION*/
+section.homeContent {
+    height: max-content;
+    margin: 5px;
+}
+section.triangularNav {
+    float: left;
+    width: 50%;
+    height: auto;
+}
+section.triangularNav > div > a > img {
+    height: 150px;
+    position: relative;
+    margin-left: 30%;
+}
+section.triangularNav > div > a.navComprador {
+    padding: 0 65px;
+}
+section.triangularNav > div > a.navComprador > img {
+    margin-top: -45px;
+    clip-path: polygon(50% 30%, 0% 100%, 100% 100%);
+}
+section.triangularNav > div > a.navNational {
+    padding: 0 50px;
+}
+section.triangularNav > div > a.navNational > img {
+    margin-top: -42px;
+    clip-path: polygon(8% 28%, 92% 28%, 100% 75%, 0 75%); 
+}
+section.triangularNav > div > a.navPetite {
+    padding: 0 35px;
+}
+section.triangularNav > div > a.navPetite > img {
+    margin-top: -80px;
+    clip-path: polygon(7% 28%, 93% 28%, 100% 75%, 0 75%);
+}
+section.triangularNav > div > a.navLabor {
+    padding: 0 18px;
+} 
+section.triangularNav > div > a.navLabor > img {
+    margin-top: -87px;
+    height: 175px;
+    clip-path: polygon(7% 28%, 93% 28%, 100% 75%, 0 75%);
+} 
+section.triangularNav > div > a.navAgri > img { 
+    margin-top: -100px;
+    height: 200px;
+    clip-path: polygon(7% 28%, 95% 28%, 100% 75%, 0 75%);
+} 
+section.triangularNav > h2 {
+    position: absolute;
+    text-shadow: 1.5px 1.5px #ff982a;
+    background-color: #800000;
+    padding: 2px;
+    background-blend-mode: luminosity;
+}
+section.triangularNav > h2:hover {
+    text-shadow: none;
+    background-color: rgba(128, 0, 0, 0);
+    color: rgba(128, 0, 0, 0);
+}
+/* For the triangualNav, I want to add a feature were the introductory sentences of each webpage and images show up. */
+
+
+
+/*INTRODUCTION OF THE HOMEPAGE*/
+article {
+    margin: -15px 5px 5px 5px;
+    font-size: 120%;
+    width: 47.5%;
+    float: left;
+    position: relative;
+    background-color: #800000;
+    padding: 5px;
+}
+@media only screen and (max-width: 950px) {
+    article {
+        clear: left;
+        margin-top: -15px;
+        width: 95%;
+        font-size: 110%;
+    }
+}
+@media only screen and (max-width: 660px) {
+    article, footer {
+        font-size: 100%;
+    }
+}
+article > img {
+    mix-blend-mode: multiply;
+    border: 3px solid #ff982a;
+    float: right;
+    width: 30%;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 10px; 
+}
+article > img:hover {
+    mix-blend-mode: normal;
+    border: 3px solid #ff982a;
+}
+
+
+
+/*COPYRIGHT*/
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    font-size: 100%;
+    text-align: right;
+}
+
+
+
+/*REFERENCES*/
+details.references {
+    margin: 10px 0;
+    padding: 2px 10px;
+    background-color: #ff982a;
+}
+details.references > ul > li {
+    list-style-type: none;
+    text-align: left;
+    padding-left: 10px;
+    text-indent: -50px;
+}
+details.references > summary {
+    font-size: 120%;
+}
+
+
+
+/*AUDIO*/
+section.audio {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    margin: 10px;
+    background-color: #ff982a;
+    color: #FEF9EF;
+    width: 400px;
+}
+section.audio > audio {
+    position: relative;
+    left: 50px;
+}
+section.audio > details {
+    margin-top: 10px;
+}
+section.audio > details > ul {
+    background-color: #800000;
+    margin-bottom: -10px;
+    padding-bottom: 30px;
+}
+section.audio > details > ul > li, section.audio > details > ul > li > a {
+    padding: 5px;
+}
+
+
+/*MENUBAR*/
+nav > ul > li {
+    list-style-type: none;
+}
+nav > ul > li > a > img {
+    width: 75px;
+    margin-top: -5px;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    z-index: 5;
+}
+nav > ul > li > img {
+    width: 75px;
+    left: 0px;
+    position: fixed;
+    top: 420px;
+    height: 100%;
+    z-index: 1;
+}
+/* For the menubar, I want to add words that come out of the icon like the one in the Khub menubar.*/
