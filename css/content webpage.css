@@ -23,6 +23,9 @@ a:hover {
 h1, h2 {
     text-align: left;
 }
+h2 {
+    margin-bottom: -8px;
+}
 h1:hover, h2:hover {
     color: #ff982a;
     font-weight: 1200;
