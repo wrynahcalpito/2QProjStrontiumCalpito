@@ -144,12 +144,18 @@ details.references > summary {
     details.references {
         margin: 0px 20px;
     }
+    section.audio {
+        width: 90%;
+    }
 }
 @media only screen and (max-width: 950px) {
     body {
         font-size: 100%;
         margin-right: 0px;
         padding-right: 5px;
+    }
+    section.audio {
+        width: 90%;
     }
 }
 
