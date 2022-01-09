@@ -10,10 +10,10 @@ body {
     box-sizing: border-box;
     overflow: auto;
 }
-section.references > a {
+section.references > a, nav > ul > li > a > img {
     color: #FEF9EF;
 }
-section.references > a:hover {
+section.references > a:hover, nav > ul > li > a:hover > img {
     opacity: 0.5;
 }
 h1:hover, h2:hover {
