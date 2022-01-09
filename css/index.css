@@ -199,6 +199,16 @@ section.audio > details > ul {
 section.audio > details > ul > li, section.audio > details > ul > li > a {
     padding: 5px;
 }
+@media only screen and (max-width: 660px) {
+    section.audio {
+        position: relative;
+        width: 100%;
+        margin: -20px 0 20px -15px;
+    }
+    section.audio > details {
+        font-size: 125%;
+    }
+}
 
 
 
