@@ -10,10 +10,10 @@ body {
     box-sizing: border-box;
     overflow: auto;
 }
-section.references > a, nav > ul > li > a > img {
+section.references > a, details.references > ul > li > a, nav > ul > li > a > img {
     color: #FEF9EF;
 }
-section.references > a:hover, nav > ul > li > a:hover > img {
+section.references > a:hover, nav > ul > li > a:hover > img, section.triangularNav > div > a:hover, details.references > ul > li > a:hover {
     opacity: 0.5;
 }
 h1:hover, h2:hover {
@@ -101,7 +101,12 @@ section.triangularNav > h2:hover {
     background-color: rgba(128, 0, 0, 0);
     color: rgba(128, 0, 0, 0);
 }
-/* For the triangualNav, I want to add a feature were the introductory sentences of each webpage and images show up. */
+
+section.homeContent > section.triangularNav > img {
+    width: 45%;
+    opacity: 0.75;
+    position: absolute;
+}
 
 
 
@@ -114,19 +119,6 @@ article {
     position: relative;
     background-color: #800000;
     padding: 5px;
-}
-@media only screen and (max-width: 950px) {
-    article {
-        clear: left;
-        margin-top: -15px;
-        width: 95%;
-        font-size: 110%;
-    }
-}
-@media only screen and (max-width: 660px) {
-    article, footer {
-        font-size: 100%;
-    }
 }
 article > img {
     mix-blend-mode: multiply;
@@ -157,7 +149,7 @@ footer {
 
 /*REFERENCES*/
 details.references {
-    margin: 10px 0;
+    margin: 12px 0;
     padding: 2px 10px;
     background-color: #ff982a;
 }
@@ -199,7 +191,35 @@ section.audio > details > ul {
 section.audio > details > ul > li, section.audio > details > ul > li > a {
     padding: 5px;
 }
+
+
+
+/*RESPONSIVITY*/
+@media only screen and (max-width: 1300px) {
+    section.homeContent > section.triangularNav > img {
+        opacity: 0.0;
+    }
+}
+@media only screen and (max-width: 950px) {
+    article {
+        clear: left;
+        margin-top: -15px;
+        width: 95%;
+        font-size: 110%;
+    }
+    section.homeContent > section.triangularNav > img {
+        height: 74%;
+        width: 80%;
+        opacity: 0.75;
+    }
+    section.homeContent > section.triangularNav > div > a > img {
+        margin-left: 50%;
+    }
+}
 @media only screen and (max-width: 660px) {
+    article, footer {
+        font-size: 100%;
+    }
     section.audio {
         position: relative;
         width: 100%;
@@ -207,6 +227,9 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
     }
     section.audio > details {
         font-size: 125%;
+    }
+    section.homeContent > section.triangularNav > div > a > img {
+        margin-left: 35%;
     }
 }
 
