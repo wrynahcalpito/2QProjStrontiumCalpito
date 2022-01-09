@@ -133,35 +133,6 @@ details.references > summary {
 
 
 
-/*RESPONSIVITY*/
-@media only screen and (max-width: 660px) {
-    section.rightPic > img, section.leftPic > img {
-        clear: both;
-        margin: 5px;
-        width: 95%;
-    }
-    details.references {
-        margin: 0px 20px;
-    }
-    section.audio {
-        position: static;
-        width: 90%;
-    }
-}
-@media only screen and (max-width: 950px) {
-    body {
-        font-size: 100%;
-        margin-right: 0px;
-        padding-right: 5px;
-    }
-    section.audio {
-        position: static;
-        width: 90%;
-    }
-}
-
-
-
 /*COPYRIGHT*/
 footer {
     font-size: 100%; 
@@ -199,6 +170,35 @@ section.audio > details > ul > li, section.audio > details > summary {
 }
 section.audio > details > ul > li, section.audio > details > ul > li > a {
     padding: 5px;
+}
+
+
+
+/*RESPONSIVITY*/
+@media only screen and (max-width: 660px) {
+    section.rightPic > img, section.leftPic > img {
+        clear: both;
+        margin: 5px;
+        width: 95%;
+    }
+    details.references {
+        margin: 0px 20px;
+    }
+    section.audio {
+        position: relative;
+        width: 100%;
+        margin: 20px 0 -20px -15px;
+    }
+    section.audio > details {
+        font-size: 125%;
+    }
+}
+@media only screen and (max-width: 950px) {
+    body {
+        font-size: 100%;
+        margin-right: 0px;
+        padding-right: 5px;
+    }
 }
 
 
