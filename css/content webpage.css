@@ -13,10 +13,14 @@ body {
     box-sizing: border-box;
     overflow: auto;
 }
-article > p > a, article > section > p > a, article > section > ul > li > a, details.references > ul > li > a, nav > ul > li > a > img {
+article > p > a, article > section > p > a, article > section > ul > li > a, details.references > ul > li > a, nav > ul > li > a > img, section.audio > details > ul > li > a{
     color: #FEF9EF;
 }
-article > p > a:hover, article > section > p > a:hover, article > section > ul > li > a:hover, details.references > ul > li > a:hover, nav > ul > li > a:hover > img {
+article > p > a:visited, article > section > p > a:visited, article > section > ul > li > a:visited, details.references > ul > li > a:visited, section.audio > details > ul > li > a:visited {
+    color: #00868b;
+    opacity: 0.75;
+}
+article > p > a:hover, article > section > p > a:hover, article > section > ul > li > a:hover, details.references > ul > li > a:hover, section.audio > details > ul > li > a:hover {
     opacity: 0.5;
 }
 h1, h2 {
@@ -274,6 +278,16 @@ div.github:hover {
 }
 
 
+nav > ul > li > a > img:hover {
+    transform: scale(0.75, 0.75);
+    opacity: 0.90;
+}
+div.twitter:hover, div.email:hover, div.github:hover {
+    transform: scale(1.10, 1.10);
+    opacity: 0.90;
+}
+
+
 @media only screen and (max-height: 600px) {
     nav > ul > li > h4 {
         top: 410px;
@@ -287,4 +301,57 @@ div.github:hover {
     div.github, div.github:hover {
         top: 530px;
     }
+}
+
+
+li.home, li.comb, li.natb, li.petb, li.labw, li.agrw {
+    opacity: 1.0;
+    list-style: none;
+    position: fixed;
+    padding: 5px 10px 5px 20px;
+    z-index: 4;
+    font-size: 35px;
+    background-color: #ff982a;
+    color: #ff982a;
+}
+li.home {
+    top: 12px;
+    left: -107px;
+}
+li.comb {
+    top: 82px;
+    left: -350px;
+}
+li.natb {
+    top: 152px;
+    left: -250px;
+}
+li.petb {
+    top: 222px;
+    left: -210px;
+}
+li.labw {
+    top: 292px;
+    left: -165px;
+}
+li.agrw {
+    top: 362px;
+    left: -250px;
+}
+li.home:hover, li.comb:hover, li.natb:hover, li.petb:hover, li.labw:hover, li.agrw:hover {
+    display: block;
+    animation-name: links;      /* this is the link to the defined @keyframes below */
+    animation-duration: 0.15s;   /* how fast/slow will the animation will be executed */
+    animation-fill-mode: forwards;  /*what will happen after the animation */
+}
+/* defining the steps in the animation */
+@keyframes links {
+    0% {left: -100px;}
+    25% {left: -75px;}
+    50% {left: -50px;} 
+    75% {left: -25px;}
+    100% {left: 75px; color: #FEF9EF;}
+}
+nav > ul > li > a > img:hover {
+    transform: scale(0.65, 0.65);
 }
