@@ -13,14 +13,14 @@ body {
     box-sizing: border-box;
     overflow: auto;
 }
-article > p > a, article > section > p > a, article > section > ul > li > a, details.references > ul > li > a, nav > ul > li > a > img, section.audio > details > ul > li > a{
+article > p > a, article > section > p > a, article > section > ul > li > a, details.references > ul > li > a, nav > ul > li > a > img, section.audio > details > ul > li > a, section.toc > ul > li > a {
     color: #FEF9EF;
 }
-article > p > a:visited, article > section > p > a:visited, article > section > ul > li > a:visited, details.references > ul > li > a:visited, section.audio > details > ul > li > a:visited {
+article > p > a:visited, article > section > p > a:visited, article > section > ul > li > a:visited, details.references > ul > li > a:visited, section.audio > details > ul > li > a:visited, section.toc > ul > li > a:visited {
     color: #00868b;
     opacity: 0.75;
 }
-article > p > a:hover, article > section > p > a:hover, article > section > ul > li > a:hover, details.references > ul > li > a:hover, section.audio > details > ul > li > a:hover {
+article > p > a:hover, article > section > p > a:hover, article > section > ul > li > a:hover, details.references > ul > li > a:hover, section.audio > details > ul > li > a:hover, section.toc > ul > li > a:hover {
     opacity: 0.5;
 }
 h1, h2 {
@@ -61,6 +61,22 @@ header img {
     top: 5px;
 }
 
+
+
+/*TABLE OF CONTENTS*/
+section.toc {
+    margin: 35px 20px -15px 20px;
+    padding: 5px;
+    background-color: #ff982a;
+}
+section.toc > h4 {
+    margin: 0 0 -5px 5px;
+    padding: 2px 2px 4px 2px;
+}
+section.toc > ul {
+    list-style-type: square;
+    float: left;
+}
 
 
 /*CONTENT*/
@@ -167,7 +183,7 @@ section.audio > details {
 section.audio > details > ul {
     background-color: #800000;
     margin-bottom: -10px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 section.audio > details > ul > li, section.audio > details > summary {
     font-size: 80%;
@@ -191,10 +207,16 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
     section.audio {
         position: relative;
         width: 100%;
-        margin: 20px 0 -20px -15px;
+        margin: 20px 0 -20px 15px;
+        background-color: #800000;
+        line-height: 10px;
     }
     section.audio > details {
         font-size: 125%;
+    }
+    section.audio > details > ul {
+        background-color: #800000;
+        padding-bottom: 0;
     }
 }
 @media only screen and (max-width: 950px) {
@@ -202,6 +224,12 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
         font-size: 100%;
         margin-right: 0px;
         padding-right: 5px;
+    }
+    section.toc {
+        margin: 35px 18px -15px 18px;
+    }
+    section.toc > ul:nth-child(2) {
+        margin-bottom: -15px;
     }
 }
 
