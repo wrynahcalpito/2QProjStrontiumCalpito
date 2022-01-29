@@ -45,7 +45,7 @@ header img {
 
 
 /*MAKE A CHANGE*/
-a#slogan {
+a#slogan:link {
     position: absolute;
     top: 260px;
     left: 150px;
@@ -53,6 +53,10 @@ a#slogan {
     font-size: 40px;
     font-weight: 800;
     font-style: italic;
+}
+a#slogan:visited {
+    color: #900000;
+    opacity: 0.75;
 }
 a#slogan:hover {
     color: #ff982a;
@@ -148,13 +152,33 @@ section#triangularNav > h2:hover {
     color: rgba(128, 0, 0, 0);
 }
 
-section.homeContent > section#triangularNav > img {
-    width: 45%;
-    opacity: 0.75;
-    position: absolute;
+
+
+/*SPECIFIC FORMATTING TO H2 IN TRIANGULAR NAV*/
+section#triangularNav > h2:nth-child(6) {
+    margin-top: -475px; 
+    margin-left: 8%;
 }
-
-
+section#triangularNav > h2:nth-child(7) {
+    margin-top: -365px; 
+    margin-left: 1.6%;
+}
+section#triangularNav > h2:nth-child(8) {
+    margin-top: -290px; 
+    margin-left: 2%;
+}
+section#triangularNav > h2:nth-child(9) {
+    margin-top: -215px; 
+    margin-left: 1.5%;
+}
+section#triangularNav > h2:nth-child(10) {
+    margin-top: -135px; 
+    margin-left: 2.5%;
+}
+section#triangularNav > h2:nth-child(11) {
+    margin-top: -100px; 
+    margin-left: 4.5%;
+}
 
 /*INTRODUCTION OF THE HOMEPAGE*/
 article {
@@ -241,22 +265,12 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
 
 
 /*RESPONSIVITY*/
-@media only screen and (max-width: 1300px) {
-    section.homeContent > section#triangularNav > img {
-        opacity: 0.0;
-    }
-}
 @media only screen and (max-width: 950px) {
     article {
         clear: left;
         margin-top: -15px;
         width: 95%;
         font-size: 110%;
-    }
-    section.homeContent > section#triangularNav > img {
-        height: 74%;
-        width: 80%;
-        opacity: 0.75;
     }
     section.homeContent > section#triangularNav > div > a > img {
         margin-left: 50%;
@@ -266,16 +280,24 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
     article, footer {
         font-size: 100%;
     }
-    section.audio {
-        position: relative;
-        width: 100%;
-        margin: -20px 0 20px -15px;
-    }
-    section.audio > details {
-        font-size: 125%;
-    }
     section.homeContent > section#triangularNav > div > a > img {
         margin-left: 35%;
+    }
+    section.audio {
+        position: relative;
+        width: 95%;
+        padding-left: 10px;
+        margin: -5% 0 5% 0.25%;
+        background-color: #800000;
+        line-height: 1.2;
+    }
+    section.audio > details {
+        font-size: 100%;
+        margin-left: 40px;
+    }
+    section.audio > details > ul {
+        background-color: #800000;
+        padding-bottom: 0;
     }
 }
 
