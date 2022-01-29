@@ -88,6 +88,14 @@ article > .noPic, article > section.leftPic, article > section.rightPic {
 
 
 
+/*SIMILAR FORMATTING IN CONTENT*/
+#pointers > img {
+    margin-right: 35px;
+}
+
+
+
+
 /*FOR WHEN THERE IS NO PICTURE*/
 .noPic {
     margin: 5px 15px 5px 10px;
@@ -179,6 +187,7 @@ section.audio > audio {
 }
 section.audio > details {
     margin-top: 10px;
+    text-align: left;
 }
 section.audio > details > ul {
     background-color: #800000;
@@ -196,6 +205,9 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
 
 /*RESPONSIVITY*/
 @media only screen and (max-width: 660px) {
+    body {
+        width: 98%;
+    }
     section.rightPic > img, section.leftPic > img {
         clear: both;
         margin: 5px;
@@ -206,13 +218,15 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
     }
     section.audio {
         position: relative;
-        width: 100%;
-        margin: 20px 0 -20px 15px;
+        width: 95%;
+        padding-left: 10px;
+        margin: 5% 0 -5% 0.25%;
         background-color: #800000;
-        line-height: 10px;
+        line-height: 1.2;
     }
     section.audio > details {
         font-size: 125%;
+        margin-left: 40px;
     }
     section.audio > details > ul {
         background-color: #800000;
