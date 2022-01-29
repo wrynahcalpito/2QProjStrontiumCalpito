@@ -239,21 +239,34 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
 nav > ul > li {
     list-style-type: none;
 }
-nav > ul > li > a > img {
+nav > ul > li.webnav {
+    position: fixed;
+}
+nav > ul > li.webnav > a {
+    text-decoration: none;
+}
+nav > ul > li.webnav > a > img {
     width: 75px;
     margin-top: -5px;
-    top: 0px;
-    left: 0px;
-    position: fixed;
     z-index: 5;
+}
+nav > ul > li.webnav > a > span {
+    list-style-type: none;
+    position: relative;
+    bottom: 25px;
+    margin-right: -7px;
+    padding: 17px 10px 17px 100px;
+    font-size: 35px;
+    background-color: #ff982a;
+    color: #FEF9EF;    
 }
 nav > ul > li > h4 {
     position: fixed;
     z-index: 5;
     left: 10px;
     bottom: 110px;
-    color: #800000;
     font-size: 85%;
+    color: #800000;
 }
 nav > ul > li > img {
     width: 75px;
@@ -265,12 +278,44 @@ nav > ul > li > img {
 }
 
 
-nav > ul > li.sprite > a > div {
-    position: fixed;
-    z-index: 5;
-    left: 15px;
+
+/*SPECIFIC WEBNAV*/
+nav > ul > li.webnav:nth-child(1) {
+    top: 0px; 
+    left: -261px;
+}
+nav > ul > li.webnav:nth-child(2) {
+    top: 75px; 
+    left: -505px;
+}
+nav > ul > li.webnav:nth-child(3) {
+    top: 145px; 
+    left: -406px;
+}
+nav > ul > li.webnav:nth-child(4) {
+    top: 215px; 
+    left: -367px;
+}
+nav > ul > li.webnav:nth-child(5) {
+    top: 285px; 
+    left: -323px;
+}
+nav > ul > li.webnav:nth-child(6) {
+    top: 355px; 
+    left: -406px;
 }
 
+
+
+/*IMAGE SPRITES FOR AUTHOR LINKS*/
+nav > ul > li.sprite {
+    list-style-type: none;
+}
+nav > ul > li.sprite > a > div {
+    position: fixed;
+    z-index: 10;
+    left: 15px;
+}
 div.twitter {
     background: url('../images/icon.png') no-repeat -294px -89px;
 	width: 38px;
@@ -304,18 +349,10 @@ div.github:hover {
 	width: 38px;
 	height: 37px;
 }
-
-
-nav > ul > li > a > img:hover {
-    transform: scale(0.75, 0.75);
-    opacity: 0.90;
-}
 div.twitter:hover, div.email:hover, div.github:hover {
-    transform: scale(1.10, 1.10);
-    opacity: 0.90;
+    transform: scale(1.15, 1.15);
+    opacity: 0.80;
 }
-
-
 @media only screen and (max-height: 600px) {
     nav > ul > li > h4 {
         top: 410px;
@@ -332,54 +369,29 @@ div.twitter:hover, div.email:hover, div.github:hover {
 }
 
 
-li.home, li.comb, li.natb, li.petb, li.labw, li.agrw {
-    opacity: 1.0;
-    list-style: none;
-    position: fixed;
-    padding: 5px 10px 5px 20px;
-    z-index: 4;
-    font-size: 35px;
-    background-color: #ff982a;
-    color: #ff982a;
+
+/*MENUBAR ANIMATIONS*/
+nav > ul > li.webnav:nth-child(1):hover {
+    transition: transform 2s;
+    transform: translate(180px);
 }
-li.home {
-    top: 12px;
-    left: -107px;
+nav > ul > li.webnav:nth-child(2):hover {
+    transition: transform 2s;
+    transform: translate(425px);
 }
-li.comb {
-    top: 82px;
-    left: -350px;
+nav > ul > li.webnav:nth-child(3):hover {
+    transition: transform 2s;
+    transform: translate(325px);
 }
-li.natb {
-    top: 152px;
-    left: -250px;
+nav > ul > li.webnav:nth-child(4):hover {
+    transition: transform 2s;
+    transform: translate(290px);
 }
-li.petb {
-    top: 222px;
-    left: -210px;
+nav > ul > li.webnav:nth-child(5):hover {
+    transition: transform 2s;
+    transform: translate(245px);
 }
-li.labw {
-    top: 292px;
-    left: -165px;
-}
-li.agrw {
-    top: 362px;
-    left: -250px;
-}
-li.home:hover, li.comb:hover, li.natb:hover, li.petb:hover, li.labw:hover, li.agrw:hover {
-    display: block;
-    animation-name: links;      /* this is the link to the defined @keyframes below */
-    animation-duration: 0.15s;   /* how fast/slow will the animation will be executed */
-    animation-fill-mode: forwards;  /*what will happen after the animation */
-}
-/* defining the steps in the animation */
-@keyframes links {
-    0% {left: -100px;}
-    25% {left: -75px;}
-    50% {left: -50px;} 
-    75% {left: -25px;}
-    100% {left: 75px; color: #FEF9EF;}
-}
-nav > ul > li > a > img:hover {
-    transform: scale(0.65, 0.65);
+nav > ul > li.webnav:nth-child(6):hover {
+    transition: transform 2s;
+    transform: translate(325px);
 }
