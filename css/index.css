@@ -456,12 +456,12 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
 @media only screen and (max-width: 480px) {
     /*for audio*/
     section.audio > audio {
-        margin-left: -20px;
+        margin-left: -50px;
     }
 
     /*triangularNav animation*/
     section.homeContent > section#triangularNav > div > a > img {
-        margin-left: 10%;
+        margin-left: 5%;
     }
     section#triangularNav {
         width: 75%;
