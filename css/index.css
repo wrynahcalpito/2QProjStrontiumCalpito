@@ -461,7 +461,7 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
 
     /*triangularNav animation*/
     section.homeContent > section#triangularNav > div > a > img {
-        margin-left: 15px;
+        margin-left: 10px;
     }
     section#triangularNav {
         width: 72%;
@@ -590,25 +590,25 @@ nav > ul > li.webnav:nth-child(6) {
 @media only screen and (max-width: 480px) {
     nav > ul > li.webnav > a > span {
         font-size: 25px;
-        padding: 20px 10px 19px 100px;
+        padding: 21px 10px 19px 100px;
     }
     nav > ul > li.webnav:nth-child(1) {
-        left: -236px;
+        left: -240px;
     }
     nav > ul > li.webnav:nth-child(2) {
         left: -424px;
     }
     nav > ul > li.webnav:nth-child(3) {
-        left: -322px;
+        left: -345px;
     }
     nav > ul > li.webnav:nth-child(4) {
         left: -312px;
     }
     nav > ul > li.webnav:nth-child(5) {
-        left: -268px;
+        left: -270px;
     }
     nav > ul > li.webnav:nth-child(6) {
-        left: -416px;
+        left: -116px;
     }
 }
 
