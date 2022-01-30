@@ -15,6 +15,10 @@ h1:hover, h2:hover {
     color: #ff982a;
     font-weight: 1200;
 }
+.italic {
+    font-style: italic;
+}
+
 
 
 /*LINKS FORMATTING*/
