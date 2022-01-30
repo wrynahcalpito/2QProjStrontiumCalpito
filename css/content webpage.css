@@ -359,6 +359,30 @@ nav > ul > li.webnav:nth-child(6) {
         left: -405.5px;
     }
 }
+/*navigation for phone*/
+@media only screen and (max-width: 480px) {
+    nav > ul > li.webnav > a > span {
+        font-size: 25px;
+    }
+    nav > ul > li.webnav:nth-child(1) {
+        left: -266px;
+    }
+    nav > ul > li.webnav:nth-child(2) {
+        left: -524px;
+    }
+    nav > ul > li.webnav:nth-child(3) {
+        left: -422px;
+    }
+    nav > ul > li.webnav:nth-child(4) {
+        left: -382px;
+    }
+    nav > ul > li.webnav:nth-child(5) {
+        left: -328px;
+    }
+    nav > ul > li.webnav:nth-child(6) {
+        left: -416px;
+    }
+}
 
 
 
