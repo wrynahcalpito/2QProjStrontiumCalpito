@@ -38,12 +38,16 @@ header {
     margin: 5px;
     margin-top: 325px;
 }
-header h2 {
+header > h2 {
     margin-top: -25px;
 }
-header img {
+header > img {
     float: left;
     margin: 5px;
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 5px;
 }
 
 
@@ -52,8 +56,8 @@ header img {
 a#slogan {
     position: absolute;
     top: 260px;
-    left: 150px;
-    color: #800000;
+    left: 100px;
+    color: #700000;
     font-size: 30px;
     font-weight: 800;
     font-style: italic;
@@ -298,225 +302,6 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
 
 
 
-/*RESPONSIVITY*/
-/*changing the formatting for a screen <950px*/
-@media only screen and (max-width: 950px) {
-    article {
-        clear: left;
-        margin-top: -15px;
-        width: 95%;
-        font-size: 110%;
-    }
-
-    /*for the triangularNav animation*/
-    section.homeContent > section#triangularNav > div > a > img {
-        margin-left: 50%;
-    }
-    section.homeContent > section#triangularNav {
-        margin-left: 10%;
-    }
-    /* defining the steps in the animation */
-    @keyframes triangularNav {
-        0% {
-            transform: scale(1, 1); /*keeping the same orientation*/
-            -webkit-transform: scale(1, 1);
-            -ms-transform: scale(1, 1);
-            -moz-transform: scale(1, 1);
-            -o-transform: scale(1, 1);
-            transform: translate(100px); /*gives the animation a swirling effect*/
-            -webkit-transform: translate(100px); 
-            -ms-transform: translate(100px);
-            -moz-transform: translate(100px);
-            -o-transform: translate(100px);
-        }
-        15% {
-            transform: scale(-1, -1); /*flips the triangle*/
-            -webkit-transform: scale(-1, -1);
-            -ms-transform: scale(-1, -1);
-            -moz-transform: scale(-1, -1);
-            -o-transform: scale(-1, -1);
-        }
-        20% {
-            margin: -50px 0 20px 30%; /*adjusts the position of the triangle when upside down*/
-        } 
-        70% {
-            margin: -50px 0 20px 30%; /*keeps the position*/
-        }
-        80% {
-            transform: scale(-1, -1); /*keeps the flipped triangle until next part*/
-            -webkit-transform: scale(-1, -1);
-            -ms-transform: scale(-1, -1);
-            -moz-transform: scale(-1, -1);
-            -o-transform: scale(-1, -1);
-        } 
-        95% {
-            transform: scale(1, 1); /*goes back to upright triangle*/
-            -webkit-transform: scale(1, 1);
-            -ms-transform: scale(1, 1);
-            -moz-transform: scale(1, 1);
-            -o-transform: scale(1, 1);
-            transform: translate(100px); /*gives the animation a swirling effect*/
-            -webkit-transform: translate(100px); 
-            -ms-transform: translate(100px);
-            -moz-transform: translate(100px);
-            -o-transform: translate(100px);
-        }
-    }
-}
-
-/*changing the formatting for a screen <660px*/
-@media only screen and (max-width: 660px) {
-    article, footer {
-        font-size: 100%;
-    }
-
-    /*audio formatting adjustments*/
-    section.audio {
-        position: relative;
-        width: 95%;
-        padding-left: 10px;
-        margin: -5% 0 5% 0;
-        background-color: #800000;
-        line-height: 1.2;
-    }
-    section.audio > details {
-        font-size: 100%;
-        margin-left: 40px;
-    }
-    section.audio > details > ul {
-        background-color: #800000;
-        padding-bottom: 0;
-    }
-
-    /*for the triangularNav animation*/
-    section.homeContent > section#triangularNav > div > a > img {
-        margin-left: 35%;
-    }
-}
-
-/*changing the formatting for a screen <530px, only for the triangularNav animation*/
-@media only screen and (max-width: 530px) {
-    section.homeContent > section#triangularNav > div > a > img {
-        margin-left: 5%;
-    }
-    section#triangularNav {
-        width: 85%;
-    }
-
-    /* defining the steps in the animation */
-    @keyframes triangularNav {
-        0% {
-            transform: scale(1, 1); /*keeping the same orientation*/
-            -webkit-transform: scale(1, 1);
-            -ms-transform: scale(1, 1);
-            -moz-transform: scale(1, 1);
-            -o-transform: scale(1, 1);
-            transform: translate(100px); /*gives the animation a swirling effect*/
-            -webkit-transform: translate(100px); 
-            -ms-transform: translate(100px);
-            -moz-transform: translate(100px);
-            -o-transform: translate(100px);
-        }
-        15% {
-            transform: scale(-1, -1); /*flips the triangle*/
-            -webkit-transform: scale(-1, -1);
-            -ms-transform: scale(-1, -1);
-            -moz-transform: scale(-1, -1);
-            -o-transform: scale(-1, -1);
-        }
-        20% {
-            margin: -50px 0 20px 5%; /*adjusts the position of the triangle when upside down*/
-        } 
-        70% {
-            margin: -50px 0 20px 5%; /*keeps the position*/
-        }
-        80% {
-            transform: scale(-1, -1); /*keeps the flipped triangle until next part*/
-            -webkit-transform: scale(-1, -1);
-            -ms-transform: scale(-1, -1);
-            -moz-transform: scale(-1, -1);
-            -o-transform: scale(-1, -1);
-        } 
-        95% {
-            transform: scale(1, 1); /*goes back to upright triangle*/
-            -webkit-transform: scale(1, 1);
-            -ms-transform: scale(1, 1);
-            -moz-transform: scale(1, 1);
-            -o-transform: scale(1, 1);
-            transform: translate(100px); /*gives the animation a swirling effect*/
-            -webkit-transform: translate(100px); 
-            -ms-transform: translate(100px);
-            -moz-transform: translate(100px);
-            -o-transform: translate(100px);
-        }
-    }
-}
-
-/*changing the formatting for a screen <480, for phones*/
-@media only screen and (max-width: 480px) {
-    /*for audio*/
-    section.audio > audio {
-        margin-left: -50px;
-    }
-
-    /*triangularNav animation*/
-    section.homeContent > section#triangularNav > div > a > img {
-        margin-left: 10px;
-    }
-    section#triangularNav {
-        width: 72%;
-    }
-
-    /* defining the steps in the animation */
-    @keyframes triangularNav {
-        0% {
-            transform: scale(1, 1); /*keeping the same orientation*/
-            -webkit-transform: scale(1, 1);
-            -ms-transform: scale(1, 1);
-            -moz-transform: scale(1, 1);
-            -o-transform: scale(1, 1);
-            transform: translate(100px); /*gives the animation a swirling effect*/
-            -webkit-transform: translate(100px); 
-            -ms-transform: translate(100px);
-            -moz-transform: translate(100px);
-            -o-transform: translate(100px);
-        }
-        15% {
-            transform: scale(-1, -1); /*flips the triangle*/
-            -webkit-transform: scale(-1, -1);
-            -ms-transform: scale(-1, -1);
-            -moz-transform: scale(-1, -1);
-            -o-transform: scale(-1, -1);
-        }
-        20% {
-            margin: -50px 0 20px 80px; /*adjusts the position of the triangle when upside down*/
-        } 
-        70% {
-            margin: -50px 0 20px 80px; /*keeps the position*/
-        }
-        80% {
-            transform: scale(-1, -1); /*keeps the flipped triangle until next part*/
-            -webkit-transform: scale(-1, -1);
-            -ms-transform: scale(-1, -1);
-            -moz-transform: scale(-1, -1);
-            -o-transform: scale(-1, -1);
-        } 
-        95% {
-            transform: scale(1, 1); /*goes back to upright triangle*/
-            -webkit-transform: scale(1, 1);
-            -ms-transform: scale(1, 1);
-            -moz-transform: scale(1, 1);
-            -o-transform: scale(1, 1);
-            transform: translate(100px); /*gives the animation a swirling effect*/
-            -webkit-transform: translate(100px); 
-            -ms-transform: translate(100px);
-            -moz-transform: translate(100px);
-            -o-transform: translate(100px);
-        }
-    }
-}
-
-
 /*MENUBAR*/
 nav > ul > li {
     list-style-type: none;
@@ -584,32 +369,6 @@ nav > ul > li.webnav:nth-child(5) {
 nav > ul > li.webnav:nth-child(6) {
     top: 355px; 
     left: -406px;
-}
-
-/*navigation for phone*/
-@media only screen and (max-width: 480px) {
-    nav > ul > li.webnav > a > span {
-        font-size: 25px;
-        padding: 21px 10px 19px 100px;
-    }
-    nav > ul > li.webnav:nth-child(1) {
-        left: -250px;
-    }
-    nav > ul > li.webnav:nth-child(2) {
-        left: -406px;
-    }
-    nav > ul > li.webnav:nth-child(3) {
-        left: -339px;
-    }
-    nav > ul > li.webnav:nth-child(4) {
-        left: -309px;
-    }
-    nav > ul > li.webnav:nth-child(5) {
-        left: -269px;
-    }
-    nav > ul > li.webnav:nth-child(6) {
-        left: -321px;
-    }
 }
 
 
@@ -731,4 +490,456 @@ nav > ul > li.webnav:nth-child(6):hover {
     -ms-transform: translate(325px);
     -moz-transform: translate(325px);
     -o-transform: translate(325px);
+}
+
+
+
+/*RESPONSIVITY*/
+/*changing the formatting for a screen's width <950px*/
+@media only screen and (max-width: 950px) {
+    article {
+        clear: left;
+        margin-top: -15px;
+        width: 95%;
+        font-size: 110%;
+    }
+
+
+    /*for the triangularNav animation*/
+    section.homeContent > section#triangularNav > div > a > img {
+        margin-left: 50%;
+    }
+    section.homeContent > section#triangularNav {
+        margin-left: 10%;
+    }
+
+    /* defining the steps in the animation */
+    @keyframes triangularNav {
+        0% {
+            transform: scale(1, 1); /*keeping the same orientation*/
+            -webkit-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            -moz-transform: scale(1, 1);
+            -o-transform: scale(1, 1);
+            transform: translate(100px); /*gives the animation a swirling effect*/
+            -webkit-transform: translate(100px); 
+            -ms-transform: translate(100px);
+            -moz-transform: translate(100px);
+            -o-transform: translate(100px);
+        }
+        15% {
+            transform: scale(-1, -1); /*flips the triangle*/
+            -webkit-transform: scale(-1, -1);
+            -ms-transform: scale(-1, -1);
+            -moz-transform: scale(-1, -1);
+            -o-transform: scale(-1, -1);
+        }
+        20% {
+            margin: -50px 0 20px 30%; /*adjusts the position of the triangle when upside down*/
+        } 
+        70% {
+            margin: -50px 0 20px 30%; /*keeps the position*/
+        }
+        80% {
+            transform: scale(-1, -1); /*keeps the flipped triangle until next part*/
+            -webkit-transform: scale(-1, -1);
+            -ms-transform: scale(-1, -1);
+            -moz-transform: scale(-1, -1);
+            -o-transform: scale(-1, -1);
+        } 
+        95% {
+            transform: scale(1, 1); /*goes back to upright triangle*/
+            -webkit-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            -moz-transform: scale(1, 1);
+            -o-transform: scale(1, 1);
+            transform: translate(100px); /*gives the animation a swirling effect*/
+            -webkit-transform: translate(100px); 
+            -ms-transform: translate(100px);
+            -moz-transform: translate(100px);
+            -o-transform: translate(100px);
+        }
+    }
+
+    /*change the size of the logo*/
+    header > img {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+/*changing the formatting for a screen's width <660px*/
+@media only screen and (max-width: 660px) {
+    article, footer {
+        font-size: 100%;
+    }
+
+    /*audio formatting adjustments*/
+    section.audio {
+        position: relative;
+        width: 95%;
+        padding-left: 10px;
+        margin: -5% 0 5% 0;
+        background-color: #800000;
+        line-height: 1.2;
+    }
+    section.audio > details {
+        font-size: 100%;
+        margin-left: 40px;
+    }
+    section.audio > details > ul {
+        background-color: #800000;
+        padding-bottom: 0;
+    }
+
+
+    /*for the triangularNav animation*/
+    section.homeContent > section#triangularNav > div > a > img {
+        margin-left: 35%;
+    }
+
+    /*changing the size of the logo*/
+    header > img {
+        height: 175px;
+        width: 175px;
+    }
+}
+
+/*changing the formatting for a screen's width <530px, only for the triangularNav animation*/
+@media only screen and (max-width: 530px) {
+    section.homeContent > section#triangularNav > div > a > img {
+        margin-left: 5%;
+    }
+    section#triangularNav {
+        width: 85%;
+    }
+
+    /* defining the steps in the animation */
+    @keyframes triangularNav {
+        0% {
+            transform: scale(1, 1); /*keeping the same orientation*/
+            -webkit-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            -moz-transform: scale(1, 1);
+            -o-transform: scale(1, 1);
+            transform: translate(100px); /*gives the animation a swirling effect*/
+            -webkit-transform: translate(100px); 
+            -ms-transform: translate(100px);
+            -moz-transform: translate(100px);
+            -o-transform: translate(100px);
+        }
+        15% {
+            transform: scale(-1, -1); /*flips the triangle*/
+            -webkit-transform: scale(-1, -1);
+            -ms-transform: scale(-1, -1);
+            -moz-transform: scale(-1, -1);
+            -o-transform: scale(-1, -1);
+        }
+        20% {
+            margin: -50px 0 20px 5%; /*adjusts the position of the triangle when upside down*/
+        } 
+        70% {
+            margin: -50px 0 20px 5%; /*keeps the position*/
+        }
+        80% {
+            transform: scale(-1, -1); /*keeps the flipped triangle until next part*/
+            -webkit-transform: scale(-1, -1);
+            -ms-transform: scale(-1, -1);
+            -moz-transform: scale(-1, -1);
+            -o-transform: scale(-1, -1);
+        } 
+        95% {
+            transform: scale(1, 1); /*goes back to upright triangle*/
+            -webkit-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            -moz-transform: scale(1, 1);
+            -o-transform: scale(1, 1);
+            transform: translate(100px); /*gives the animation a swirling effect*/
+            -webkit-transform: translate(100px); 
+            -ms-transform: translate(100px);
+            -moz-transform: translate(100px);
+            -o-transform: translate(100px);
+        }
+    }
+}
+
+/*changing the formatting for a screen's width <480px, for phones*/
+@media only screen and (max-width: 480px) {
+    /*for audio*/
+    section.audio > audio {
+        margin-left: -50px;
+    }
+
+    /*triangularNav animation*/
+    section.homeContent > section#triangularNav > div > a > img {
+        margin-left: 10px;
+    }
+    section#triangularNav {
+        width: 72%;
+    }
+
+    /* defining the steps in the animation */
+    @keyframes triangularNav {
+        0% {
+            transform: scale(1, 1); /*keeping the same orientation*/
+            -webkit-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            -moz-transform: scale(1, 1);
+            -o-transform: scale(1, 1);
+            transform: translate(100px); /*gives the animation a swirling effect*/
+            -webkit-transform: translate(100px); 
+            -ms-transform: translate(100px);
+            -moz-transform: translate(100px);
+            -o-transform: translate(100px);
+        }
+        15% {
+            transform: scale(-1, -1); /*flips the triangle*/
+            -webkit-transform: scale(-1, -1);
+            -ms-transform: scale(-1, -1);
+            -moz-transform: scale(-1, -1);
+            -o-transform: scale(-1, -1);
+        }
+        20% {
+            margin: -50px 0 20px 80px; /*adjusts the position of the triangle when upside down*/
+        } 
+        70% {
+            margin: -50px 0 20px 80px; /*keeps the position*/
+        }
+        80% {
+            transform: scale(-1, -1); /*keeps the flipped triangle until next part*/
+            -webkit-transform: scale(-1, -1);
+            -ms-transform: scale(-1, -1);
+            -moz-transform: scale(-1, -1);
+            -o-transform: scale(-1, -1);
+        } 
+        95% {
+            transform: scale(1, 1); /*goes back to upright triangle*/
+            -webkit-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            -moz-transform: scale(1, 1);
+            -o-transform: scale(1, 1);
+            transform: translate(100px); /*gives the animation a swirling effect*/
+            -webkit-transform: translate(100px); 
+            -ms-transform: translate(100px);
+            -moz-transform: translate(100px);
+            -o-transform: translate(100px);
+        }
+    }
+
+    /*navigation for phone*/
+    nav > ul > li.webnav > a > span {
+        font-size: 25px;
+        padding: 27px 10px 19px 100px;
+    }
+    nav > ul > li.webnav:nth-child(1) {
+        left: -218px;
+    }
+    nav > ul > li.webnav:nth-child(2) {
+        left: -392px;
+    }
+    nav > ul > li.webnav:nth-child(3) {
+        left: -321px;
+    }
+    nav > ul > li.webnav:nth-child(4) {
+        left: -293px;
+    }
+    nav > ul > li.webnav:nth-child(5) {
+        left: -262px;
+    }
+    nav > ul > li.webnav:nth-child(6) {
+        left: -321px;
+    }
+
+    /*menubar animations*/
+    nav > ul > li.webnav:nth-child(1):hover {
+        transition: transform 2s;
+        transform: translate(130px);
+        -webkit-transform: translate(130px);
+        -ms-transform: translate(130px);
+        -moz-transform: translate(130px);
+        -o-transform: translate(130px);
+    }
+    nav > ul > li.webnav:nth-child(2):hover {
+        transition: transform 2s;
+        transform: translate(305px);
+        -webkit-transform: translate(305px);
+        -ms-transform: translate(305px);
+        -moz-transform: translate(305px);
+        -o-transform: translate(305px);
+    }
+    nav > ul > li.webnav:nth-child(3):hover {
+        transition: transform 2s;
+        transform: translate(235px);
+        -webkit-transform: translate(235px);
+        -ms-transform: translate(235px);
+        -moz-transform: translate(235px);
+        -o-transform: translate(235px);
+    }
+    nav > ul > li.webnav:nth-child(4):hover {
+        transition: transform 2s;
+        transform: translate(205px);
+        -webkit-transform: translate(205px);
+        -ms-transform: translate(205px);
+        -moz-transform: translate(205px);
+        -o-transform: translate(205px);
+    }
+    nav > ul > li.webnav:nth-child(5):hover {
+        transition: transform 2s;
+        transform: translate(175px);
+        -webkit-transform: translate(175px);
+        -ms-transform: translate(175px);
+        -moz-transform: translate(175px);
+        -o-transform: translate(175px);
+    }
+    nav > ul > li.webnav:nth-child(6):hover {
+        transition: transform 2s;
+        transform: translate(240px);
+        -webkit-transform: translate(240px);
+        -ms-transform: translate(240px);
+        -moz-transform: translate(240px);
+        -o-transform: translate(240px);
+    }
+
+    /*changing the size of the logo*/
+    header > img {
+        height: 125px;
+        width: 125px;
+    }
+}
+
+/*changing the formatting for a screen's width <375px, mobile m*/
+@media only screen and (max-width: 375px) {
+    /*audio formatting*/
+    audio {
+        width: 95%;
+    }
+    section.audio {
+        margin-left: 5px;
+    }
+    section.audio > details {
+        margin-left: 10px;
+    }
+
+    /*triangularNav animation*/
+    section.homeContent > section#triangularNav > div > a > img {
+        margin-left: -30px;
+    }
+    section#triangularNav {
+        width: 60%;
+    }
+
+    /* defining the steps in the animation */
+    @keyframes triangularNav {
+        0% {
+            transform: scale(1, 1); /*keeping the same orientation*/
+            -webkit-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            -moz-transform: scale(1, 1);
+            -o-transform: scale(1, 1);
+            transform: translate(100px); /*gives the animation a swirling effect*/
+            -webkit-transform: translate(100px); 
+            -ms-transform: translate(100px);
+            -moz-transform: translate(100px);
+            -o-transform: translate(100px);
+        }
+        15% {
+            transform: scale(-1, -1); /*flips the triangle*/
+            -webkit-transform: scale(-1, -1);
+            -ms-transform: scale(-1, -1);
+            -moz-transform: scale(-1, -1);
+            -o-transform: scale(-1, -1);
+        }
+        20% {
+            margin: -50px 0 20px 85px; /*adjusts the position of the triangle when upside down*/
+        } 
+        70% {
+            margin: -50px 0 20px 85px; /*keeps the position*/
+        }
+        80% {
+            transform: scale(-1, -1); /*keeps the flipped triangle until next part*/
+            -webkit-transform: scale(-1, -1);
+            -ms-transform: scale(-1, -1);
+            -moz-transform: scale(-1, -1);
+            -o-transform: scale(-1, -1);
+        } 
+        95% {
+            transform: scale(1, 1); /*goes back to upright triangle*/
+            -webkit-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            -moz-transform: scale(1, 1);
+            -o-transform: scale(1, 1);
+            transform: translate(100px); /*gives the animation a swirling effect*/
+            -webkit-transform: translate(100px); 
+            -ms-transform: translate(100px);
+            -moz-transform: translate(100px);
+            -o-transform: translate(100px);
+        }
+    }
+}
+
+/*changing the formatting for a screen's width <320px, mobile m*/
+@media only screen and (max-width: 320px) {
+    /* defining the steps in the animation */
+    @keyframes triangularNav {
+        0% {
+            transform: scale(1, 1); /*keeping the same orientation*/
+            -webkit-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            -moz-transform: scale(1, 1);
+            -o-transform: scale(1, 1);
+            transform: translate(100px); /*gives the animation a swirling effect*/
+            -webkit-transform: translate(100px); 
+            -ms-transform: translate(100px);
+            -moz-transform: translate(100px);
+            -o-transform: translate(100px);
+        }
+        15% {
+            transform: scale(-1, -1); /*flips the triangle*/
+            -webkit-transform: scale(-1, -1);
+            -ms-transform: scale(-1, -1);
+            -moz-transform: scale(-1, -1);
+            -o-transform: scale(-1, -1);
+        }
+        20% {
+            margin: -50px 0 20px 102.5px; /*adjusts the position of the triangle when upside down*/
+        } 
+        70% {
+            margin: -50px 0 20px 102.5px; /*keeps the position*/
+        }
+        80% {
+            transform: scale(-1, -1); /*keeps the flipped triangle until next part*/
+            -webkit-transform: scale(-1, -1);
+            -ms-transform: scale(-1, -1);
+            -moz-transform: scale(-1, -1);
+            -o-transform: scale(-1, -1);
+        } 
+        95% {
+            transform: scale(1, 1); /*goes back to upright triangle*/
+            -webkit-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            -moz-transform: scale(1, 1);
+            -o-transform: scale(1, 1);
+            transform: translate(100px); /*gives the animation a swirling effect*/
+            -webkit-transform: translate(100px); 
+            -ms-transform: translate(100px);
+            -moz-transform: translate(100px);
+            -o-transform: translate(100px);
+        }
+    }
+    
+    /*content*/
+    section.homeContent > article {
+        width: 110%;
+    }
+
+    /*audio*/
+    audio {
+        width: 110%;
+    }
+
+    /*changing the size of the logo*/
+    header > img {
+        height: 125px;
+        width: 125px;
+    }
 }
