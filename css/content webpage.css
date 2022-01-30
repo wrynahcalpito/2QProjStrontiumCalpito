@@ -367,22 +367,22 @@ nav > ul > li.webnav:nth-child(6) {
         padding: 21px 10px 19px 100px;
     }
     nav > ul > li.webnav:nth-child(1) {
-        left: -220px;
+        left: -210px;
     }
     nav > ul > li.webnav:nth-child(2) {
-        left: -426px;
+        left: -446px;
     }
     nav > ul > li.webnav:nth-child(3) {
-        left: -341px;
+        left: -343px;
     }
     nav > ul > li.webnav:nth-child(4) {
-        left: -310px;
+        left: -311px;
     }
     nav > ul > li.webnav:nth-child(5) {
         left: -269px;
     }
     nav > ul > li.webnav:nth-child(6) {
-        left: -341px;
+        left: -361px;
     }
 }
 
