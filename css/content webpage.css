@@ -260,6 +260,14 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
     }
 }
 
+/*changing the formatting for a screen <480, for phones*/
+@media only screen and (max-width: 480px) {
+    /*for audio*/
+    section.audio > audio {
+        margin-left: -20px;
+    }
+}
+
 
 
 /*MENUBAR*/
