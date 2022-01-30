@@ -1,3 +1,4 @@
+/*OVERALL FORMATTING*/
 body {
     background-color: #800000;
     color: #FEF9EF;
@@ -13,16 +14,6 @@ body {
     box-sizing: border-box;
     overflow: auto;
 }
-article > p > a, article > section > p > a, article > section > ul > li > a, details.references > ul > li > a, nav > ul > li > a > img, section.audio > details > ul > li > a, section.toc > ul > li > a {
-    color: #FEF9EF;
-}
-article > p > a:visited, article > section > p > a:visited, article > section > ul > li > a:visited, details.references > ul > li > a:visited, section.audio > details > ul > li > a:visited, section.toc > ul > li > a:visited {
-    color: #00868b;
-    opacity: 0.75;
-}
-article > p > a:hover, article > section > p > a:hover, article > section > ul > li > a:hover, details.references > ul > li > a:hover, section.audio > details > ul > li > a:hover, section.toc > ul > li > a:hover {
-    opacity: 0.5;
-}
 h1, h2 {
     text-align: left;
 }
@@ -33,11 +24,25 @@ h1:hover, h2:hover {
     color: #ff982a;
     font-weight: 1200;
 }
-p {
+p { /*indention of all text*/
     text-indent: 50px;
 }
-.italic {
+.italic { /*class="italic" is more convenient than style="font-style: italic;"*/
     font-style: italic;
+}
+
+
+
+/*LINKS FORMATTING*/
+article > p > a, article > section > p > a, article > section > ul > li > a, details.references > ul > li > a, nav > ul > li > a > img, section.audio > details > ul > li > a, section.toc > ul > li > a {
+    color: #FEF9EF;
+}
+article > p > a:visited, article > section > p > a:visited, article > section > ul > li > a:visited, details.references > ul > li > a:visited, section.audio > details > ul > li > a:visited, section.toc > ul > li > a:visited {
+    color: #00868b;
+    opacity: 0.75;
+}
+article > p > a:hover, article > section > p > a:hover, article > section > ul > li > a:hover, details.references > ul > li > a:hover, section.audio > details > ul > li > a:hover, section.toc > ul > li > a:hover {
+    opacity: 0.5;
 }
 
 
@@ -79,20 +84,16 @@ section.toc > ul {
 }
 
 
+
 /*CONTENT*/
 article > .noPic, article > section.leftPic, article > section.rightPic {
     position: relative;
     height: max-content;
     margin: 5px;
 }
-
-
-
-/*SIMILAR FORMATTING IN CONTENT*/
-#pointers > img {
+#pointers > img { /*similar formatting found in the content, in the pointers (#pointer)*/
     margin-right: 35px;
 }
-
 
 
 
@@ -110,14 +111,14 @@ section.leftPic {
     margin: 5px;
     position: relative;
 }
-section.leftPic > img {
+section.leftPic > img { /*format of the photo*/
     margin: 5px;
     width: 30%;
     height: auto;
     float: left;
     padding: 5px;
 }
-section.leftPic > h2, section.leftPic > p, section.leftPic > ul > li {
+section.leftPic > h2, section.leftPic > p, section.leftPic > ul > li { /*format of the text*/
     margin: 5px;  
     padding: 5px;
 }
@@ -129,14 +130,14 @@ section.rightPic {
     margin: 5px;
     position: relative;
 }
-section.rightPic > img {
+section.rightPic > img { /*format of the photo*/
     margin: 5px;
     width: 30%;
     height: auto;
     float: right;
     padding: 5px;
 }
-section.rightPic > h2, section.rightPic > p, section.rightPic > ul > li {
+section.rightPic > h2, section.rightPic > p, section.rightPic > ul > li { /*format of the text*/
     margin: 5px; 
     padding: 5px; 
 }
@@ -204,19 +205,26 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
 
 
 /*RESPONSIVITY*/
+/*changing the formatting for a screen <660px*/
 @media only screen and (max-width: 660px) {
     body {
         width: 98%;
     }
+
+    /*removing the float of the image because it is too small when the browser is <660px*/
     section.rightPic > img, section.leftPic > img {
         clear: both;
         margin: 5px;
         width: 95%;
     }
+
+    /*references*/
     details.references {
         margin: 0px 20px;
     }
-    section.audio {
+
+    /*audio*/
+    section.audio { /*removing the audio from the top-right corner of the website to under the header (to be better accessible)*/
         position: relative;
         width: 95%;
         padding-left: 10px;
@@ -233,12 +241,16 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
         padding-bottom: 0;
     }
 }
+
+/*changing the formatting for a screen <950px*/
 @media only screen and (max-width: 950px) {
     body {
         font-size: 100%;
         margin-right: 0px;
         padding-right: 5px;
     }
+
+    /*changing the format of the table of contents*/
     section.toc {
         margin: 35px 18px -15px 18px;
     }
@@ -253,18 +265,18 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
 nav > ul > li {
     list-style-type: none;
 }
-nav > ul > li.webnav {
+nav > ul > li.webnav { 
     position: fixed;
 }
 nav > ul > li.webnav > a {
     text-decoration: none;
 }
-nav > ul > li.webnav > a > img {
+nav > ul > li.webnav > a > img { /*formatting the images*/
     width: 75px;
     margin-top: -5px;
     z-index: 5;
 }
-nav > ul > li.webnav > a > span {
+nav > ul > li.webnav > a > span { /*formatting the text*/
     list-style-type: none;
     position: relative;
     bottom: 25px;
@@ -274,21 +286,21 @@ nav > ul > li.webnav > a > span {
     background-color: #ff982a;
     color: #FEF9EF;    
 }
-nav > ul > li > h4 {
-    position: fixed;
-    z-index: 5;
-    left: 10px;
-    bottom: 110px;
-    font-size: 85%;
-    color: #800000;
-}
-nav > ul > li > img {
+nav > ul > li > img { /*formatting the orange background*/
     width: 75px;
     left: 0px;
     position: fixed;
     top: 420px;
     height: 100%;
     z-index: 1;
+}
+nav > ul > li > h4 { /*formatting author text*/
+    position: fixed;
+    z-index: 5;
+    left: 10px;
+    bottom: 110px;
+    font-size: 85%;
+    color: #800000;
 }
 
 
@@ -318,6 +330,23 @@ nav > ul > li.webnav:nth-child(6) {
     top: 355px; 
     left: -406px;
 }
+@media only screen and (max-width: 950px) { /*fixing the alignment of navigation when the browser is <950px*/
+    nav > ul > li.webnav:nth-child(1) {
+        left: -260.5px;
+    }
+    nav > ul > li.webnav:nth-child(3) {
+        left: -405.5px;
+    }
+    nav > ul > li.webnav:nth-child(4) {
+        left: -366px;
+    }
+    nav > ul > li.webnav:nth-child(5) {
+        left: -322px;
+    }
+    nav > ul > li.webnav:nth-child(6) {
+        left: -405.5px;
+    }
+}
 
 
 
@@ -330,6 +359,8 @@ nav > ul > li.sprite > a > div {
     z-index: 10;
     left: 15px;
 }
+
+/*getting the image sprites*/
 div.twitter {
     background: url('../images/icon.png') no-repeat -294px -89px;
 	width: 38px;
@@ -363,11 +394,15 @@ div.github:hover {
 	width: 38px;
 	height: 37px;
 }
-div.twitter:hover, div.email:hover, div.github:hover {
+div.twitter:hover, div.email:hover, div.github:hover { /*transform effects for the image sprites*/
     transform: scale(1.15, 1.15);
+    -webkit-transform: scale(1.15, 1.15);
+    -ms-transform: scale(1.15, 1.15);
+    -moz-transform: scale(1.15, 1.15);
+    -o-transform: scale(1.15, 1.15);
     opacity: 0.80;
 }
-@media only screen and (max-height: 600px) {
+@media only screen and (max-height: 600px) { /*if the browser's height is <600px, the author image sprites links go up right below the navigation*/
     nav > ul > li > h4 {
         top: 410px;
     }
@@ -388,24 +423,48 @@ div.twitter:hover, div.email:hover, div.github:hover {
 nav > ul > li.webnav:nth-child(1):hover {
     transition: transform 2s;
     transform: translate(180px);
+    -webkit-transform: translate(180px);
+    -ms-transform: translate(180px);
+    -moz-transform: translate(180px);
+    -o-transform: translate(180px);
 }
 nav > ul > li.webnav:nth-child(2):hover {
     transition: transform 2s;
     transform: translate(425px);
+    -webkit-transform: translate(425px);
+    -ms-transform: translate(425px);
+    -moz-transform: translate(425px);
+    -o-transform: translate(425px);
 }
 nav > ul > li.webnav:nth-child(3):hover {
     transition: transform 2s;
     transform: translate(325px);
+    -webkit-transform: translate(325px);
+    -ms-transform: translate(325px);
+    -moz-transform: translate(325px);
+    -o-transform: translate(325px);
 }
 nav > ul > li.webnav:nth-child(4):hover {
     transition: transform 2s;
     transform: translate(290px);
+    -webkit-transform: translate(290px);
+    -ms-transform: translate(290px);
+    -moz-transform: translate(290px);
+    -o-transform: translate(290px);
 }
 nav > ul > li.webnav:nth-child(5):hover {
     transition: transform 2s;
     transform: translate(245px);
+    -webkit-transform: translate(245px);
+    -ms-transform: translate(245px);
+    -moz-transform: translate(245px);
+    -o-transform: translate(245px);
 }
 nav > ul > li.webnav:nth-child(6):hover {
     transition: transform 2s;
     transform: translate(325px);
+    -webkit-transform: translate(325px);
+    -ms-transform: translate(325px);
+    -moz-transform: translate(325px);
+    -o-transform: translate(325px);
 }
