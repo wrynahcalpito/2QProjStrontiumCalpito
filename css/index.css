@@ -461,10 +461,10 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
 
     /*triangularNav animation*/
     section.homeContent > section#triangularNav > div > a > img {
-        margin-left: 5%;
+        margin-left: 15px;
     }
     section#triangularNav {
-        width: 75%;
+        width: 72%;
     }
 
     /* defining the steps in the animation */
@@ -489,7 +489,7 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
             -o-transform: scale(-1, -1);
         }
         20% {
-            margin: -50px 0 20px 0; /*adjusts the position of the triangle when upside down*/
+            margin: -50px 0 20px 80px; /*adjusts the position of the triangle when upside down*/
         } 
         70% {
             margin: -50px 0 20px 0; /*keeps the position*/
@@ -586,7 +586,30 @@ nav > ul > li.webnav:nth-child(6) {
     left: -406px;
 }
 
-
+/*navigation for phone*/
+@media only screen and (max-width: 480px) {
+    nav > ul > li.webnav > a > span {
+        font-size: 25px;
+    }
+    nav > ul > li.webnav:nth-child(1) {
+        left: -266px;
+    }
+    nav > ul > li.webnav:nth-child(2) {
+        left: -524px;
+    }
+    nav > ul > li.webnav:nth-child(3) {
+        left: -422px;
+    }
+    nav > ul > li.webnav:nth-child(4) {
+        left: -382px;
+    }
+    nav > ul > li.webnav:nth-child(5) {
+        left: -328px;
+    }
+    nav > ul > li.webnav:nth-child(6) {
+        left: -416px;
+    }
+}
 
 /*IMAGE SPRITES FOR AUTHOR LINKS*/
 nav > ul > li.sprite {
