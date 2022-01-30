@@ -233,6 +233,9 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
         background-color: #800000;
         line-height: 1.2;
     }
+    section.audio > audio {
+        margin-left: -10px;
+    }
     section.audio > details {
         font-size: 125%;
         margin-left: 40px;
@@ -264,7 +267,7 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
 @media only screen and (max-width: 480px) {
     /*for audio*/
     section.audio > audio {
-        margin-left: -20px;
+        margin-left: -50px;
     }
 }
 
