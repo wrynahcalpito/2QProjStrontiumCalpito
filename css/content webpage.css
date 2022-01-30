@@ -27,6 +27,9 @@ h1:hover, h2:hover {
 p { /*indention of all text*/
     text-indent: 50px;
 }
+ul > li {
+    text-align: left;
+}
 .italic { /*class="italic" is more convenient than style="font-style: italic;"*/
     font-style: italic;
 }
@@ -54,10 +57,10 @@ header {
     margin: 5px;
     margin-top: 325px;
 }
-header h2 {
+header > h2 {
     margin-top: -25px;
 }
-header img {
+header > img {
     float: left;
     margin: 5px;
     height: 250px;
@@ -95,7 +98,9 @@ article > .noPic, article > section.leftPic, article > section.rightPic {
 #pointers > img { /*similar formatting found in the content, in the pointers (#pointer)*/
     margin-right: 35px;
 }
-
+article > section > audio {
+    margin-left: 10%;
+}
 
 
 /*FOR WHEN THERE IS NO PICTURE*/
@@ -205,74 +210,6 @@ section.audio > details > ul > li, section.audio > details > ul > li > a {
 
 
 
-/*RESPONSIVITY*/
-/*changing the formatting for a screen <660px*/
-@media only screen and (max-width: 660px) {
-    body {
-        width: 98%;
-    }
-
-    /*removing the float of the image because it is too small when the browser is <660px*/
-    section.rightPic > img, section.leftPic > img {
-        clear: both;
-        margin: 5px;
-        width: 95%;
-    }
-
-    /*references*/
-    details.references {
-        margin: 0px 20px;
-    }
-
-    /*audio*/
-    section.audio { /*removing the audio from the top-right corner of the website to under the header (to be better accessible)*/
-        position: relative;
-        width: 95%;
-        padding-left: 10px;
-        margin: 5% 0 -5% 0;
-        background-color: #800000;
-        line-height: 1.2;
-    }
-    section.audio > audio {
-        margin-left: -10px;
-    }
-    section.audio > details {
-        font-size: 125%;
-        margin-left: 40px;
-    }
-    section.audio > details > ul {
-        background-color: #800000;
-        padding-bottom: 0;
-    }
-}
-
-/*changing the formatting for a screen <950px*/
-@media only screen and (max-width: 950px) {
-    body {
-        font-size: 100%;
-        margin-right: 0px;
-        padding-right: 5px;
-    }
-
-    /*changing the format of the table of contents*/
-    section.toc {
-        margin: 35px 18px -15px 18px;
-    }
-    section.toc > ul:nth-child(2) {
-        margin-bottom: -15px;
-    }
-}
-
-/*changing the formatting for a screen <480, for phones*/
-@media only screen and (max-width: 480px) {
-    /*for audio*/
-    section.audio > audio {
-        margin-left: -50px;
-    }
-}
-
-
-
 /*MENUBAR*/
 nav > ul > li {
     list-style-type: none;
@@ -341,49 +278,6 @@ nav > ul > li.webnav:nth-child(5) {
 nav > ul > li.webnav:nth-child(6) {
     top: 355px; 
     left: -406px;
-}
-@media only screen and (max-width: 950px) { /*fixing the alignment of navigation when the browser is <950px*/
-    nav > ul > li.webnav:nth-child(1) {
-        left: -260.5px;
-    }
-    nav > ul > li.webnav:nth-child(3) {
-        left: -405.5px;
-    }
-    nav > ul > li.webnav:nth-child(4) {
-        left: -366px;
-    }
-    nav > ul > li.webnav:nth-child(5) {
-        left: -322px;
-    }
-    nav > ul > li.webnav:nth-child(6) {
-        left: -405.5px;
-    }
-}
-
-/*navigation for phone*/
-@media only screen and (max-width: 480px) {
-    nav > ul > li.webnav > a > span {
-        font-size: 25px;
-        padding: 21px 10px 19px 100px;
-    }
-    nav > ul > li.webnav:nth-child(1) {
-        left: -250px;
-    }
-    nav > ul > li.webnav:nth-child(2) {
-        left: -406px;
-    }
-    nav > ul > li.webnav:nth-child(3) {
-        left: -339px;
-    }
-    nav > ul > li.webnav:nth-child(4) {
-        left: -309px;
-    }
-    nav > ul > li.webnav:nth-child(5) {
-        left: -269px;
-    }
-    nav > ul > li.webnav:nth-child(6) {
-        left: -321px;
-    }
 }
 
 
@@ -505,4 +399,220 @@ nav > ul > li.webnav:nth-child(6):hover {
     -ms-transform: translate(325px);
     -moz-transform: translate(325px);
     -o-transform: translate(325px);
+}
+
+
+
+/*RESPONSIVITY*/
+/*changing the formatting for a screen's width <950px*/
+@media only screen and (max-width: 950px) {
+    body {
+        font-size: 100%;
+        margin-right: 0px;
+        padding-right: 5px;
+    }
+
+    /*changing the format of the table of contents*/
+    section.toc {
+        margin: 35px 18px -15px 18px;
+    }
+    section.toc > ul:nth-child(2) {
+        margin-bottom: -15px;
+    }
+
+    /*fixing the alignment of navigation when the browser is <950px*/
+    nav > ul > li.webnav:nth-child(1) {
+        left: -260.5px;
+    }
+    nav > ul > li.webnav:nth-child(3) {
+        left: -405.5px;
+    }
+    nav > ul > li.webnav:nth-child(4) {
+        left: -366px;
+    }
+    nav > ul > li.webnav:nth-child(5) {
+        left: -322px;
+    }
+    nav > ul > li.webnav:nth-child(6) {
+        left: -405.5px;
+    }
+
+    /*change the size of the logo*/
+    header > img {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+/*changing the formatting for a screen's width <660px*/
+@media only screen and (max-width: 660px) {
+    body {
+        width: 98%;
+    }
+
+    /*removing the float of the image because it is too small when the browser is <660px*/
+    section.rightPic > img, section.leftPic > img {
+        clear: both;
+        margin: 5px;
+        width: 95%;
+    }
+
+    /*references*/
+    details.references {
+        margin: 0px 20px;
+    }
+
+    /*audio*/
+    section.audio { /*removing the audio from the top-right corner of the website to under the header (to be better accessible)*/
+        position: relative;
+        width: 95%;
+        padding-left: 10px;
+        margin: 5% 0 -5% 0;
+        background-color: #800000;
+        line-height: 1.2;
+    }
+    section.audio > audio {
+        margin-left: -10px;
+    }
+    section.audio > details {
+        font-size: 125%;
+        margin-left: 40px;
+    }
+    section.audio > details > ul {
+        background-color: #800000;
+        padding-bottom: 0;
+    }
+
+    /*changing the size of the logo*/
+    header > img {
+        height: 175px;
+        width: 175px;
+    }
+}
+
+/*changing the formatting for a screen's width <480px, for phones*/
+@media only screen and (max-width: 480px) {
+    /*for audio*/
+    section.audio > audio { /*tatsulok song*/
+        margin-left: -50px;
+    }
+    article > section > audio { /*complementary audio to the article*/
+        margin-left: 0;
+    }
+
+    /*navigation for phone*/
+    nav > ul > li.webnav > a > span {
+        font-size: 25px;
+        padding: 27px 10px 19px 100px;
+    }
+    nav > ul > li.webnav:nth-child(1) {
+        left: -217px;
+    }
+    nav > ul > li.webnav:nth-child(2) {
+        left: -391px;
+    }
+    nav > ul > li.webnav:nth-child(3) {
+        left: -320px;
+    }
+    nav > ul > li.webnav:nth-child(4) {
+        left: -292px;
+    }
+    nav > ul > li.webnav:nth-child(5) {
+        left: -261px;
+    }
+    nav > ul > li.webnav:nth-child(6) {
+        left: -320px;
+    }
+
+    /*menubar animations*/
+    nav > ul > li.webnav:nth-child(1):hover {
+        transition: transform 2s;
+        transform: translate(130px);
+        -webkit-transform: translate(130px);
+        -ms-transform: translate(130px);
+        -moz-transform: translate(130px);
+        -o-transform: translate(130px);
+    }
+    nav > ul > li.webnav:nth-child(2):hover {
+        transition: transform 2s;
+        transform: translate(305px);
+        -webkit-transform: translate(305px);
+        -ms-transform: translate(305px);
+        -moz-transform: translate(305px);
+        -o-transform: translate(305px);
+    }
+    nav > ul > li.webnav:nth-child(3):hover {
+        transition: transform 2s;
+        transform: translate(235px);
+        -webkit-transform: translate(235px);
+        -ms-transform: translate(235px);
+        -moz-transform: translate(235px);
+        -o-transform: translate(235px);
+    }
+    nav > ul > li.webnav:nth-child(4):hover {
+        transition: transform 2s;
+        transform: translate(205px);
+        -webkit-transform: translate(205px);
+        -ms-transform: translate(205px);
+        -moz-transform: translate(205px);
+        -o-transform: translate(205px);
+    }
+    nav > ul > li.webnav:nth-child(5):hover {
+        transition: transform 2s;
+        transform: translate(175px);
+        -webkit-transform: translate(175px);
+        -ms-transform: translate(175px);
+        -moz-transform: translate(175px);
+        -o-transform: translate(175px);
+    }
+    nav > ul > li.webnav:nth-child(6):hover {
+        transition: transform 2s;
+        transform: translate(240px);
+        -webkit-transform: translate(240px);
+        -ms-transform: translate(240px);
+        -moz-transform: translate(240px);
+        -o-transform: translate(240px);
+    }
+
+    /*changing the size of the logo*/
+    header > img {
+        height: 125px;
+        width: 125px;
+    }
+}
+
+/*changing the formatting for a screen's width <375px, mobile m*/
+@media only screen and (max-width: 375px) {
+    /*audio formatting*/
+    audio {
+        width: 95%;
+    }
+    section.audio {
+        margin-left: 5px;
+    }
+    section.audio > details {
+        margin-left: 10px;
+    }
+}
+
+/*changing the formatting for a screen's width <320px, mobile m*/
+@media only screen and (max-width: 320px) {
+    audio {
+        width: 90%;
+    }
+    section.audio {
+        margin-left: 5px;
+    }
+    section.audio > details {
+        margin-left: 10px;
+    }
+
+    body {
+        width: 106%;
+    }
+
+    header > img {
+        height: 125px;
+        width: 125px;
+    }
 }
